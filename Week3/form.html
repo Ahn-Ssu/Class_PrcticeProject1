@@ -9,13 +9,18 @@
     <style>
         input[type=text],
         select {
-            width: 100%;
+            width: 50%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+            transition: width 0.5s ease-in-out;
         }
 
         input[type=submit] {
@@ -64,7 +69,7 @@
 
     <p id="demo"></p>
 
-    <form action="/form_ok.php" onsubmit="retrun validateForm()" method="post">
+    <form name="week3form" action="/form_ok.php" onsubmit="return validateForm()" method="post">
         <div class="back">
             <div class="rolling"></div>
             <br><br>
@@ -73,7 +78,7 @@
             <fieldset>
                 <legend> Hello stranger </legend>
                 <label for="nick">닉네임 Nick</label><br>
-                <input type="text" id="nick" name="nick" placeholder="아이디 입력" required><br>
+                <input type="text" id="nick" name="nick" placeholder="아이디 입력"><br>
             </fieldset>
 
             <label for="gender">성별 gender</label><br>
@@ -81,8 +86,8 @@
             <input type="radio" id="gender2" name="gender" value="female">여자 <br>
 
 
-            <br><label for="id">학번 stuID</label><br>
-            <input type="text" id="id" name="id" required placeholder="22000202"><br>
+            <br><label for="stuID">학번 stuID</label><br>
+            <input type="text" id="stuId" name="stuID" required placeholder="22000202" pattern="[0-9]"><br>
             <label for="email">이메일 email</label><br>
             <input type="text" id="email" name="email" placeholder="22000202@handong.edu"
                 pattern="/^[0-9a-z]([-_.]?[0-9a-z])*@[0-9a-z]([-_.]?[0-9a-z])*.[a-z]{2,6}$/i"><br>
@@ -91,7 +96,7 @@
 
 
             <lable for="major">전공을 선택해주세요</lable><br>
-            <select id="major" name="majorSelector" required>
+            <select id="major" name="major" >
                 <optgroup label="새내기">
                     <option value="GLS">글로벌리더십공학부</option>
                 </optgroup>
@@ -125,5 +130,31 @@
 
     </form>
 </body>
+<script>
+    function validateForm() {
+        var nick = document.week3form.nick;
+        if (nick.value == "") {
+            alert("닉네임을 입력하세요");
+            nick.focus();
+            return false;
+        }
+
+        var gender = document.week3form.gender;
+        if (gender.value == "") {
+            alert("성별을 선택해주세요");
+            gender.focus();
+            return false;
+        }
+
+        var stuID = document.week3form.id;
+        if (stuID.length != 8) {
+            alert("학번 8자리를 입력해주세요")
+            stuID.focus();
+            return false;
+        }
+
+        alert("저장 성공~")
+    }
+</script>
 
 </html>
