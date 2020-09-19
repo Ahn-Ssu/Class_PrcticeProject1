@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helloWeek3</title>
+
+    <style>
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4958df;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=reset] {
+            background-color: #5560c9;
+            color: white;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #3647da;
+        }
+
+        .back {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .rolling {
+            width: 100px;
+            height: 100px;
+            background-color: #4958df;
+            transition: transform 100s ease .5s;
+        }
+
+        .rolling:active {
+            transform: rotate(333333333333333333333333333deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+    <p id="demo"></p>
+
+    <form action="/form_ok.php" onsubmit="retrun validateForm()" method="post">
+        <div class="back">
+            <div class="rolling"></div>
+            <br><br>
+
+            <input type="reset" value="reset"><br>
+            <fieldset>
+                <legend> Hello stranger </legend>
+                <label for="nick">닉네임 Nick</label><br>
+                <input type="text" id="nick" name="nick" placeholder="아이디 입력" required><br>
+            </fieldset>
+
+            <label for="gender">성별 gender</label><br>
+            <input type="radio" id="gender1" name="gender" value="male">남자
+            <input type="radio" id="gender2" name="gender" value="female">여자 <br>
+
+
+            <br><label for="id">학번 stuID</label><br>
+            <input type="text" id="id" name="id" required placeholder="22000202"><br>
+            <label for="email">이메일 email</label><br>
+            <input type="text" id="email" name="email" placeholder="22000202@handong.edu"
+                pattern="/^[0-9a-z]([-_.]?[0-9a-z])*@[0-9a-z]([-_.]?[0-9a-z])*.[a-z]{2,6}$/i"><br>
+
+
+
+
+            <lable for="major">전공을 선택해주세요</lable><br>
+            <select id="major" name="majorSelector" required>
+                <optgroup label="새내기">
+                    <option value="GLS">글로벌리더십공학부</option>
+                </optgroup>
+                <optgroup label="인문대">
+                    <option value="국제">국제어문학부</option>
+                    <option value="경경">경영경제학부</option>
+                    <option value="법">법학부</option>
+                    <option value="언정">커뮤니케이션학부</option>
+                    <option value="상사">상담심리사회복지학부</option>
+                </optgroup>
+                <optgroup label="자연대">
+                    <option value="생명">생명과학부</option>
+                </optgroup>
+                <optgroup label="공대">
+                    <option value="공시">공간환경시스템공학부</option>
+                    <option value="전전" selected>전산전자공학부</option>
+                    <option value="콘디">콘텐츠융합디자인학부</option>
+                    <option value="기계">기계제어공학부</option>
+                    <option value="ICT">ICT창업학부</option>
+                </optgroup>
+            </select><br><br>
+
+            <label for="greetingText">프로필 메세지를 입력해주세요</label><br>
+            <textarea id="greetingText" name="greetingText" placeholder="간단한 인사말도 좋아요!" rows="5"
+                cols="40"></textarea><br><br>
+
+
+
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</body>
+
+</html>
