@@ -13,7 +13,7 @@
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff;
             border-radius: 4px;
             box-sizing: border-box;
         }
@@ -24,8 +24,8 @@
         }
 
         input[type=submit] {
-            width: 100%;
-            background-color: #4958df;
+            width: 50%;
+            background-color: #3F6ABF;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -35,51 +35,53 @@
         }
 
         input[type=reset] {
-            background-color: #5560c9;
+            background-color: #75c3f8;
             color: white;
             float: right;
         }
 
         input[type=submit]:hover {
-            background-color: #3647da;
+            background-color: #75c3f8;
+          
+        }
+        .layout{
+            width:70%
         }
 
         .back {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color: #faffe3;
             padding: 20px;
         }
 
         .rolling {
-            width: 100px;
-            height: 100px;
-            background-color: #4958df;
-            transition: transform 100s ease .5s;
+            width: 75px;
+            height: 75px;
+            background-color: #3F6ABF;
+            float: left;
         }
 
-        .rolling:active {
+        .rolling:hover {
+            transition: transform, 100s ease .1s;
+            background-color: #75c3f8;
             transform: rotate(333333333333333333333333333deg);
         }
     </style>
 </head>
 
 <body>
-
-    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
-
-    <p id="demo"></p>
-
+    
     <form name="week3form" action="/form_ok.php" onsubmit="return validateForm()" method="post">
         <div class="back">
-            <div class="rolling"></div>
-            <br><br>
-
-            <input type="reset" value="reset"><br>
-            <fieldset>
-                <legend> Hello stranger </legend>
+            <center>
+            
+            <div class="rolling" onmouseout="stopRoll()">DON'T<br>PUT<br>YOUR<br>MOUSE<br></div><br><br><br>
+            <input type="reset" value="reset">
+            <br><br><fieldset>
+                <legend class="layout"> Hello stranger </legend>
                 <label for="nick">닉네임 Nick</label><br>
-                <input type="text" id="nick" name="nick" placeholder="아이디 입력"><br>
-            </fieldset>
+                <input type="text" id="nick" name="nick" placeholder="아이디 입력" onclick="noticeNick()"><br>
+            
 
             <label for="gender">성별 gender</label><br>
             <input type="radio" id="gender1" name="gender" value="male">남자
@@ -96,7 +98,7 @@
 
 
             <lable for="major">전공을 선택해주세요</lable><br>
-            <select id="major" name="major" >
+            <select id="major" name="major" onkeypress="noticeMajor()">
                 <optgroup label="새내기">
                     <option value="GLS">글로벌리더십공학부</option>
                 </optgroup>
@@ -122,19 +124,26 @@
             <label for="greetingText">프로필 메세지를 입력해주세요</label><br>
             <textarea id="greetingText" name="greetingText" placeholder="간단한 인사말도 좋아요!" rows="5"
                 cols="40"></textarea><br><br>
-
+            </fieldset>
 
 
             <input type="submit" value="Submit">
+        </center>
         </div>
 
     </form>
+    
 </body>
 <script>
     function validateForm() {
         var nick = document.week3form.nick;
         if (nick.value == "") {
             alert("닉네임을 입력하세요");
+            nick.focus();
+            return false;
+        }
+        if (nick.length < 2) {
+            alert("닉네임은 2글자 이상으로 해주세요");
             nick.focus();
             return false;
         }
@@ -154,6 +163,15 @@
         }
 
         alert("저장 성공~")
+    }
+    function stopRoll() {
+        alert("??? : but I'm stay hungry");
+    }
+    function noticeNick() {
+        alert("not your name, not user ID");
+    }
+    function noticeMajor() {
+        alert("don't use key")
     }
 </script>
 
