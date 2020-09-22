@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- 메타를 통해서 설정, 기기의 너비에 화면 크기를 맞추고, 스케일의 비율은 1.0  -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
+    /* 이 속성이 없으면 영역크기(width/height)에 padding, border는 별도로 적용이 됨  */
   box-sizing: border-box;
 }
 
@@ -67,7 +69,15 @@ html {
 [class*="col-"] {
   width: 100%;
 }
-
+/* 특정한규칙으로 스타일을 정하는 방식
+@import, @font-face, @media, @key-frames, @charset */
+/* meida Features
+max-width/height : 디바이스 화면(브라우저)의 너비, 높이 최대치
+min-width/height : 디바이저 화면의 너비 높이 최소치
+max-color, max-color-index : 디바이스의 표현가능한 최대 컬러 비트 수, 최대 컬러 갯수
+orientation : 화면(viewport) 표시방향 (landscape or portrait)
+max - aspect- ratio, min-aspect-ratio : 화면의 가로:세로 비율 최대치, 최소치
+resolution : 출력 디바이스의 해상도 (dpi/dpcm)*/
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .col-s-1 {width: 8.33%;}
@@ -97,7 +107,11 @@ html {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+  
 }
+/* [class*="col-"]{
+    width: 100%;
+} */
 </style>
 </head>
 <body>
