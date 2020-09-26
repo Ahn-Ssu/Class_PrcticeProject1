@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <title>IU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+
+    .row:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+      width: 100%;
+      min-width: 300px;
+      color: #ffffff
+    }
+
+
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      cursor: pointer;
+      padding: 8px;
+      margin-bottom: 7px;
+      background-color: #ad77c8;
+      color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      max-width: 300px;
+    }
+
+    .menu li:hover {
+      background-color: #9933cc;
+    }
+
+    .aside {
+      
+      background-color: #82e4e7;
+      padding: 15px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .footer {
+      background-color: #55c6ec;
+      color: #ffffff;
+      text-align: center;
+      font-size: 12px;
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .col-4 {
+      background-color: #ad77c8;
+      padding: 15px;
+      margin: 10px
+    }
+
+
+
+    @media only screen and (max-width: 766px) {
+      .menu li {
+        max-width: 100%;
+      }
+      [class*="col-"] {
+      width: 100%;
+      max-width: 100%;
+    }
+    }
+
+    @media only screen and (min-width: 766px) {
+      .col-s-1 {
+        width: 10%;
+      }
+
+      .col-s-2 {
+        width: 20%;
+      }
+
+      .col-s-3 {
+        width: 30%;
+      }
+
+      .col-s-4 {
+        width: 40%;
+      }
+
+      .col-s-5 {
+        width: 50%;
+      }
+
+      .col-s-6 {
+        width: 60%;
+      }
+
+      .col-s-7 {
+        width: 70%;
+      }
+
+      .col-s-8 {
+        width: 80%;
+      }
+
+      .col-s-9 {
+        width: 90%;
+      }
+
+      .col-s-10 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .col-1 {
+        width: 10%;
+      }
+
+      .col-2 {
+        width: 20%;
+      }
+
+      .col-3 {
+        width: 30%;
+      }
+
+      .col-4 {
+        width: 40%;
+      }
+
+      .col-5 {
+        width: 50%;
+      }
+
+      .col-6 {
+        width: 60%;
+      }
+
+      .col-7 {
+        width: 70%;
+      }
+
+      .col-8 {
+        width: 80%;
+      }
+
+      .col-9 {
+        width: 90%;
+      }
+
+      .col-10 {
+        width: 100%;
+      }
+    }
+
+    .photo {
+      min-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="titleLabel.png" id="titleLabel" width="100%" , height="5%" alt="" />
+  </div>
+
+  <div class="row">
+    <div class="col-2 col-s-2 menu">
+      <ul>
+        <li>개요</li>
+        <li>대중적 인기와 기록</li>
+        <li>역사와 성장 배경</li>
+        <li>유애나; 팬덤</li>
+        <li onclick="openLink()" name="githubLink">이거 만든 사람</li>
+      </ul>
+    </div>
+
+    <div class="col-4 col-s-6">
+      <div class="photo"><img src="IU.jpg" id="img1" width="60%" alt="" /></div>
+
+      <h1>아이유 </h1>
+      <p>대한민국의 가수 겸 배우이다. 본명은 이지은이며, 예명 아이유(IU)는 "음악으로 너와 내가 하나가 된다"라는 뜻을 가지고 있다. 2008년에 데뷔하였다. 국민 여동생이라고도 불렸으며 이제는 국민
+        가수라고 불리운다.
+
+        대한민국 가요계에서 독보적인 위치를 점하고 있는 여성 솔로 가수이다. 개성을 갖춘 타고난 목소리와 시대를 선도해나가는 작사•작곡능력으로 2010년대 가장 성공한 대한민국 가수 중 하나가 되었다.
+        20대의 어린 나이에 가요계를 독주하고 있는 현재진행형 레전드로 평가받는다. 또한, 다양한 장르를 소화해 내는 만능형 가수라는 평가를 받는다. 2010년 잔소리와 좋은 날로 부흥한 이후 10년째 가요계
+        정상의 위치를 굳건히 지키며 롱런하고 있다.
+
+        가수 활동 이외에도 각종 예능 프로그램 및 광고 모델로 활약중이고 다양한 드라마와 영화에서 연기 활동을 펼치고 있는 멀티 엔터테이너이다.</p>
+
+    </div>
+
+    <div class="col-3 col-s-10">
+      <div class="aside">
+        <h2>― 뉴욕 타임스 25 Songs that tell us where music is going 중</h2>
+        <h5>eng.</h5>
+        <p>"IU is one of K-pop’s rare chart-topping singer-songwriters, and her proficiency of introspection is
+          compelling because she’s almost able to slowly crack away at the genre’s clichés. She emits an authenticity I
+          haven’t found elsewhere."</p>
+        <h5>kor.</h5>
+        <p>"아이유는 드물게도 음원차트를 장악하는 K-POP 싱어송라이터 중 한 명이며, 그의 자아성찰에 대한 숙련은 이 장르의 클리셰를 서서히 깨나갈 정도이기에 주목하지 않을 수 없다. 그는 다른 곳에서는
+          찾을 수 없는 진정성을 뿜어낸다."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h3>팬들을 부르는 통칭은 유애나이다.</h3>
+    <p>
+      남성 팬들을 건빵, 여성 팬들을 별사탕이라고 부르기도 한다. 이러한 용어가 만들어진 이유는 아이유의 여성 팬들이 '건빵 속의 별사탕'만큼 적어서. 그런데 이건 옛날 이야기고 지금은 거의 1:1에 가까운
+      성비를 이루고 있다. 직접적인 유래는 공식 팬카페에다 직접 댓글을 쓴 것에서 따왔다고 한다. 카페의 다른 글에 남긴 댓글에 따르면 안티는 우유라고 한다. 건빵만 먹다보면(=팬 사랑만 받다보면) 목
+      막히니까(=우쭐해 지니까) 우유 한 모금씩 마셔줘야(=욕도 먹어줘야) 밸런스 유지가 된다고(=초심을 지킬 수 있다) 한다.</p>
+      더 많은 정보 <a href="https://namu.wiki/w/%EC%95%84%EC%9D%B4%EC%9C%A0">아이유 위키</a>로 이동하기
+  </div>
+
+</body>
+<script>
+  function openLink(){
+    location.href="https://github.com/Ahn-Ssu/practiceProject/tree/master/Week4"
+  }
+</script>
+</html>
