@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        color: #777 !important;
+        line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('./Image/X-T4.jpg');
+        min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url("./Image/X-T4_four.jpg");
+        min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+        background-image: url("./Image/film.jpg");
+        min-height: 400px;
+    }
+
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: scroll;
+            min-height: 400px;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+            <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+        </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Shot on <span
+                    class="w3-hide-small">FUJIFILM</span>.</span>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+        <h3 class="w3-center">안녕하세요.</h3>
+        <p class="w3-center"><em>일상을 그럴싸하게 남기는 것을 좋아합니다.</em></p>
+        <p> 후지필름을 사용한지는 <b>1년</b>이 조금 더 되었습니다. 군대에서 모은 적금으로 전역하면서 카메라를 같이 샀으니까, 그정도 되네요. 제가 사용하는 카메라는 후지필름의 X-T3 입니다.
+        </p>
+        <p> 카메라를 처음 만진건 5년전인 16년도입니다. 그때는 캐논을 사용했는데 지금도 그렇지만 예전에도 캐논, 니콘, 소니 어떤 회사가 카메라를 정말 잘 만드냐에 대한 논쟁이 있었고 그 논쟁의 대상이
+            되는 카메라를 사용하니까 그런 자존심싸움에 신경을 쓰게 되더라구요. 어느샌가 사진찍는 재미는 살짝 잃어버린채 더 선명하고 예쁘게 나오는 렌즈, 더 파워풀한 기능을 제공해주는 카메라 바디, 흠
+            잡을 곳을 최대한 줄이는 보정 등 사진을 기계적으로 찍고 있는 것을 발견했습니다.</p>
+        <p> 그러니까 재미 없더라구요. 그래서 남들과 다른 길과 고유한 감성을 가지고 있는 후지필름으로 선택을 하게되었습니다. 결과는 대 만족이예요. 주변에도 후지필름을 사용하는 사람이 없어서 잘은 모르지만
+            카메라를 살때 추천해주거나 제가 찍은 사진을 받으면 좋아해주시는 분들이 많습니다. 저도 사진답게 사진을 찍고 있고요. 다시 편안한 사진생활 중이예요</p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><span data-toggle="tooltip" data-placement="top" title="누르면 제 인스타그램 피드로 이동합니다!"><b><a href="https://www.instagram.com/_ahn_ssu/" target="_blank" style="text-decoration: none;"><i
+                    class="fa fa-instagram w3-hover-opacity"></i> _ahn_ssu</b></a></span>
+                    <br><a
+                        style="font-size: x-small;">   인스타그램으로 놀러오세요</a></p>
+
+
+                <img src="./Image/selfie_color.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+                    alt="Photo of Me" width="500" height="333">
+            </div>
+
+            <!-- Hide this text on small devices -->
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>
+                    저는 2018 한스트 영상팀으로 참여했었고, 17년도에는 언정 워크샵으로 독립영화를 찍는데에 참여를 했습니다. 동아리는 VAM 이구요. 근데 저는 지금 컴퓨터공학을 전공하고
+                    있습니다. 예전에 언정을 전공하다가 전과한 것도 아닙니다. 전과를 했지만 이전 전공은 생명과학부였습니다.
+                    제가 이렇게 혼종스러운 일들을 참 잘합니다. 그래도 컴퓨터공학을 하면서 재밌다고 느끼고 있는 중이니까 다행이 아닐까요?? 아님 말고.<br>
+                    여자친구는 저보고 공대생의 머리와 문과생의 감수성을 가지고 있다고는 하지만 실제로 저는 공대생의 감수성과 문과생의 사고방식을 가지고 있는게 아닐까하는 생각이 종종 듭니다...
+                    이번학기 PL이 세상에서 제일 어렵네요. 살빠져서 바지 허리에 주먹들어감 분량채우려고 아무말해봤습니다
+                </p>
+            </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">한동에서 주로 하는 일</p>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>랩실에서 앉아있기(공부아님)</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-camera"></i>촬영</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:20%">20%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-apple"></i>요리해먹기</p>
+        <div class="w3-light-grey">
+            <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:12%">10%</div>
+        </div>
+    </div>
+
+    <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">14+</span><br>
+            Partners
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">55+</span><br>
+            Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">89+</span><br>
+            Happy Clients
+        </div>
+        <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">150+</span><br>
+            Meetings
+        </div>
+    </div> -->
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+        <h3 class="w3-center">후지필름으로.</h3>
+        <p class="w3-center"><em>가장 최근에 찍었던 사진들입니다.<br> 클릭하시면 좀더 자세히 볼수 있어요
+            </em></p><br>
+
+        <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="./Image/4x3(2).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="가을, 현동홀 본관의 모습">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/4x3(4).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="여름, 쾌청한 죽천 바닷가">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/4x3(1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="추석, 뉴턴홀 4층 테라스에서">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/4x3(3).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="추석, 대보름">
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="./Image/9x21(1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="창조도서관, 아이폰으로">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/9x21(4)_ratio.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="영일대 해변가, 아이폰으로">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/9x21(2).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="느혜미아에서, 아이폰으로">
+            </div>
+
+            <div class="w3-col m3">
+                <img src="./Image/9x21(5).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                    alt="학관 야공과 한동하늘, 아이폰으로">
+            </div>
+            <a href="https://www.instagram.com/_ahn_ssu/" target="_blank" style="text-decoration: none;"><button
+                    class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">SEE MORE!</button></a>
+        </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+        <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+                class="fa fa-remove"></i></span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img id="img01" class="w3-image">
+            <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">뉴턴홀에 있어요.</h3>
+        <p class="w3-center"><em>???: RUN</em></p>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="./Image/table.jpg" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>퐝, 한국<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 010-5161-1234
+                    <br>
+                    <a href="mailto:21600402@handong.edu?subject=google" target="_blank" style="text-decoration: none;"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 21600402@handong.edu<br></a>
+                    <a href="https://github.com/ahn-ssu" target="_blank" style="text-decoration: none;"><i class="fa fa-github fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> _Ahn_Ssu<br></a>
+                </div>
+                <br>
+                <p>저한테 학기 힘내라고 메세지 남겨주시면 감사하겠습니더.</p>
+                <form action="/action_page.php" target="_blank">
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="성함" required name="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" placeholder="연락처:이메일/전화번호" required name="Email">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" placeholder="메세지" required name="Message">
+                    <button class="w3-button w3-black w3-right w3-section btn btn-primary" type="button" class="" data-toggle="popover" title="감사합니다 ><" data-content="응원해주신분도 좋은 하루 되셨으면 좋겠어요!">
+                        <i class="fa fa-paper-plane"></i> 응원하기
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      $( function () {
+        $( '[data-toggle="popover"]' ).popover({trigger: 'focus'})
+      } );
+    </script>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+    
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+  
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
